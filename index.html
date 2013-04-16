@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bibliographie PFE</title>
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>CLUSTER DE SMARTPHONE</h2>
+					<h3>Recherche Bibliographique</h3>
+                    <h6 style="margin-top:100px;">Alger Vivien & Hostalery Eric & Salvador Cédric &
+                    Vacher Mathieu</h6>
+				</section>
+				
+		        <section>
+                  <h2>Introduction</h2>
+                  <img src="sf_nw.png"/>
+                </section>
+
+                <section>
+                  <h2>Gestion des ressources</h2>
+                  <img src="battery.png"/>
+                </section>
+
+                <section>
+                  <h2>Utilisation Bluetooth/Adhoc</h2>
+                  <img src="bluetooth.png"/>
+                </section>
+
+                <section>
+                  <h2>Sécurité multi-réseaux</h2>
+                  <ul style="list-style-type:none">
+                  <li> Une seule forme de sécurité adaptable </li>
+                  <li> Peu pertinent pour les mêmes raisons que la précédente </li>
+                  <li> Android et iOS = Unix-like </li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>Architecture dynamique</h2>
+                  <ul style="list-style-type:none">
+                  <li> Réagir aux pertes/changements de réseaux </li>
+                  <li> Adapter la tolérance aux pannes pour les smartphones </li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>Etat des lieux</h2>
+                  Acteurs traditionnels :<br/>
+                  <ul>
+                    <li>Gridgain</li>
+                    <li>AKKA</li>
+                    <li>Hadoop</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>Gridgain</h2>
+                  <ul style="list-style-type:none">
+                    <li>Pas de portage officiel</li>
+                    <li>Uniquement une API client</li>
+                    <li>Rien de non officiel non plus</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>AKKA</h2>
+                  <ul style="list-style-type:none">
+                      <li>Pas de support Android annoncé</li>
+                      <li>Peut néanmoins fonctionner sous Android</li>
+                      <li>Problèmes : 
+                        <ul style="list-style-type:none">
+                            <li>Pas de gestion de batterie</li>
+                            <li>Architecture gérée automatiquement</li>
+                        </ul>
+                      </li>
+                  </ul>
+                </section>
+                <section>
+	              <h2>Hyrax</h2>
+	              <ul style="list-style-type:none">
+		            <li>Système de MapReduce pour smartphones.</li>
+		            <li>Portage non officiel d'Hadoop sur Android.</li>
+		            <li>Utilise les smartphones pour le stockage et le traitement des données.</li>
+	              </ul>
+                </section>
+
+                <section>
+	              <h2>Hyrax</h2>
+	              <ul style="list-style-type:none">
+		            <li>Exécution d'appli distribuées sur smartphones => pas d'achat de serveurs</li>
+		            <li>Un mobile = un noeud de stockage et un noeud de calcul</li>
+		            <li>Traitement des données disponibles sur les mobiles</li>
+		            <li>Mais pas encore entièrement transposé sur les smartphones: nécessite un serveur pour le noeud maître</li>
+	              </ul>
+                </section>
+
+                <section>
+	              <h2>Hyrax</h2>
+	              <p>Remplit les conditions indispensables à la viabilité d'une plateforme cloud mobile:</p>
+	              <ul>
+		            <li>Les utilisateurs et applications peuvent accéder à n’importe quelle donnée stockée sur le cluster indépendamment de sa localisation physique</li>
+		            <li>La plateforme est capable de répartir un job entre les noeuds et de combiner les résultats pour les présenter à l’utilisateur</li>
+		            <li>Tolérance aux pannes</li>
+		            <li>Fonctionne avec n'importe quel smartphone Android</li>
+		            <li>Des progrès à faire niveau économie d'énergie, bande-passante et mémoire</li>
+	              </ul>
+                </section>
+
+                <section>
+	              <h2>Conclusion</h2>	              
+	              <ul style="list-style-type:none">
+		            <li> Domaine émergent avec la montée en puissance des mobiles </li>
+                    <li> Développement faible des principales solutions </li>
+                    <li> Besoin d'une vraie adaptation pour les smartphones </li>
+	              </ul>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
