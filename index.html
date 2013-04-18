@@ -44,6 +44,11 @@
                     </h6>
 				</section>
 				
+                <section>
+                  <h2>Hyrax</h2>
+                  <img height="500px" src="cluster_hyrax.png"/>
+                </section>
+
 		        <section>
                   <h2>Problématique</h2>
                   <span>
@@ -66,10 +71,6 @@
                 </section>
 
                 <section>
-                  <h2>Hyrax et Akka-mobile</h2>
-                </section>
-
-                <section>
                   <h2>Architecture avec NameNode</h2>
                 </section>
 
@@ -84,7 +85,27 @@
                 <section>
                   <h2>Mis en application: portage d'Akka couplé avec GCM</h2>
                 </section>
+
+                <section>
+                  <h2>Application reliée à GCM</h2>
+                  <ul>
+                    <li>enregistrement auprès de GCM</li>
+                    <li>récupérer les informations des autres téléphones</li>
+                    <li>problème avec la gestion des tâches en Android</li>
+                  </ul>
+                </section>
                 
+                <section>
+                  <h2>Intégration des messages par SMS</h2>
+                  <ul>
+                    <li>sérialisation JSON pour les messages entre acteurs</li>
+                    <li>utilisation d'un service externe comme Twilio pour
+                    communiquer avec GCM</li>
+                    <li>ou utiliser un téléphone comme pont avec le serveur</li>
+                    <li>ne pas spammer l'utilisateur avec des notifications</li>
+                  </ul>
+                </section>
+
                 <section>
 	              <h2>Conclusion</h2>	              
 	              <ul style="list-style-type:none">
