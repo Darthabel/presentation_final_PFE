@@ -165,6 +165,41 @@
                     <li>ne pas spammer l'utilisateur avec des notifications</li>
                   </ul>
                 </section>
+                
+                <section>
+					<h2>Akka-mobile</h2>
+                </section>
+                
+                <section>
+					<h2>Fonctionnement</h2>
+					<ul>
+						<li>Modèle clients(smartphones)-serveur(fixe)</li>
+						<li>Le client se connecte, reçoit la référence d'un actor, lui envoie un message</li>
+						<li>Le serveur associe une connexion TCP avec l'identifiant de l'appareil
+							et transmet le message à l'actor ciblé</li>
+						<li>L'actor traite le message et y répond ou le transmet</li>
+						<li>Avant de répondre, le serveur vérifie que le client est toujours connecté</li>
+					</ul>
+                </section>
+                
+                <section>
+					<h2>Fonctionnement</h2>
+					<ul>
+						<li>S'il n'y a plus de connexion, on utilise C2MD(GCM)</li>
+						<li>Un message est envoyé à travers ce service
+							pour dire au téléphone que des réponses sont disponibles sur le serveur</li>
+						<li>Le client pourra se connecter et les obtenir</li>
+					</ul>
+                </section>
+                
+                <section>
+					<h2>Problèmes</h2>
+					<ul>
+						<li>Projet plus maintenu</li>
+						<li>Projet Scala 2.9.1 - Akka 1.2 pour Android 2.3</li>
+						<li>Travail de portage trop important</li>
+					</ul>
+                </section>
 
                 <section>
 	              <h2>Conclusion</h2>	              
